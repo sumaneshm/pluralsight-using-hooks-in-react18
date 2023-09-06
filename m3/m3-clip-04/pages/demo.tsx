@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-let trackChanges = true;
+const trackChanges = true;
 
 export default function Demo() {
     const [text1, setText1] = useState("First");
@@ -16,7 +16,6 @@ export default function Demo() {
         <div>
             <input onChange={e=>setText1(e.target.value)} value={text1}/>
             <br/>
-            <button onClick={e=>trackChanges=!trackChanges} title="Click"/>
         </div>
     )
 }
