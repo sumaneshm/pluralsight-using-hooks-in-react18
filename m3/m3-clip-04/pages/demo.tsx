@@ -7,9 +7,8 @@ export default function Demo() {
     
     if (trackChanges){
         useEffect(()=>
-        {   return () => {
-                document.title=`${text1.length}`;
-            }
+        {   
+            document.title=`${text1.length}`;
         }, [text1]);
     }
     return (
