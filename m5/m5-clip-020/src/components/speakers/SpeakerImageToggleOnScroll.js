@@ -42,6 +42,10 @@ export default function SpeakerImageToggleOnScroll({
           ? "img-fluid rounded-start "
           : "img-fluid rounded-start speaker-image"
       }
+      onClick={()=>{
+        const rect=imageRef.current.getBoundingClientRect();
+        alert(`rect.top : ${rect.top}, rect.bottom : ${rect.bottom}, window.innerHeight: ${window.innerHeight}`);
+      }}
       style={{ filter: `${grayScale}` }}
       ref={imageRef}
     />

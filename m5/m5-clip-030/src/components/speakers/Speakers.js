@@ -1,10 +1,13 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
+
 import React from "react";
 import { speakerList } from "../../../speakersData";
 import SpeakerMenu from "./SpeakerMenu";
 import SpeakersList from "./SpeakersList";
 
 function Speakers() {
-  const darkTheme = false;
+  const {darkTheme} = useContext(ThemeContext);
 
   return (
     <div className={darkTheme ? "theme-dark" : "theme-light"}>
